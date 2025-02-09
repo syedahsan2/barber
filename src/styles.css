@@ -1,0 +1,400 @@
+/* styles.css */
+/* General Styles */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+  }
+  
+  .sidebar ul li {
+    margin: 15px 0;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .sidebar a:hover {
+    background-color: #555;
+  }
+  
+  /* Close Button (Cross Icon) */
+  .close-btn {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  
+  .close-btn:hover {
+    color: #ccc;
+  }
+  
+  /* Responsive Styles (for mobile only) */
+  @media screen and (max-width: 768px) {
+    /* Hide regular nav on mobile */
+    nav ul {
+      display: none;
+    }
+  
+    /* Show hamburger menu only on mobile */
+    .hamburger {
+      display: flex;
+    }
+  
+    /* Show the sidebar when it's open */
+    .sidebar {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Additional responsiveness for even smaller screens */
+  @media screen and (max-width: 480px) {
+    header h1 {
+      font-size: 20px;
+    }
+  
+    .sidebar {
+      width: 100%;
+    }
+  
+    .sidebar ul li {
+      font-size: 18px;
+    }
+  }  
+   
+  section {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #555;
+  }
+  /* Slider Container */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* Center Text Overlay */
+  .slider-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the text both horizontally and vertically */
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center; /* Ensures the text is centered */
+  }
+  
+  .slider-text h2 {
+    margin: 0;
+  }
+  
+  /* Navigation Buttons */
+  .slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .slider-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .slider-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .slider-text h2 {
+      font-size: 1.5rem;
+    }
+  
+    .slider-nav button {
+      font-size: 20px;
+      padding: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slider-text h2 {
+      font-size: 1.2rem;
+    }
+  
+    .slider-nav button {
+      font-size: 18px;
+      padding: 5px;
+    }
+  }
+  
+  /* About Section */
+#about {
+  padding: 20px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* Image Styling */
+.about-image-container {
+  margin: 20px 0; /* Adds gap above and below the image */
+}
+
+.about-image-container img {
+  width: 100%;
+  max-width: 600px; /* Sets a maximum width for the image */
+  height: auto;
+  border-radius: 8px; /* Optional: gives the image rounded corners */
+}
+
+/* Image with Text Overlay */
+.image-with-text-container {
+  position: relative;
+  margin: 20px 0; /* Adds gap around the image and text */
+}
+
+.image-overlay {
+  position: relative;
+}
+
+.image-overlay img {
+  width: 100%;
+  max-width: 100%; /* Ensures the image is responsive */
+  border-radius: 8px;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: adds a semi-transparent black background */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.overlay-text h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.overlay-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  #about h2 {
+    font-size: 2rem;
+  }
+
+  #about p {
+    font-size: 1rem;
+  }
+
+  .about-image-container img {
+    width: 90%;
+  }
+
+  .overlay-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .overlay-text p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  #about h2 {
+    font-size: 1.5rem;
+  }
+
+  #about p {
+    font-size: 0.9rem;
+  }
+
+  .about-image-container img {
+    width: 100%;
+  }
+
+  .overlay-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .overlay-text p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
