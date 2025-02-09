@@ -16,20 +16,21 @@ const About = () => {
       <p>TERRITORY OF PREMIUM QUALITY SINCE 1990</p>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
 
-      {/* Image with Text Overlay and Button */}
-      <div className="image-with-text-container">
-        <div className="image-overlay">
-          <img
-            src="https://via.placeholder.com/600x400?text=Barber+Shop+Image+Text+Overlay"
-            alt="Barber Shop Overlay"
+            {/* New Section with Image and Text */}
+          <div className="image-text-section">
+          <div className="image-container">
+          <img 
+            src="./eg1.webp" 
+            alt="Barber Shop with Text" 
+            className="image-with-text" 
           />
-          <div className="overlay-text">
-            <h3>Visit Us Today!</h3>
-            <p>Experience premium grooming services</p>
-            <button className="cta-button">Book Now</button>
+          <div className="text-overlay">
+            <p>Enhance your look with the finest grooming experience!</p>
+            <button>test</button>
           </div>
         </div>
-      </div>
+        </div>
+
     </section>
   );
 };

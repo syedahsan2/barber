@@ -2,9 +2,12 @@ import React from 'react';
 
 const Appointment = () => {
   return (
-    <section id="appointment">
-      <h2>Book Your Service</h2>
-      <form>
+<section >
+<h2>Appointment</h2>
+      <p >Book Your Service
+      </p>
+      <p >Signup to our newsletters and get most of the community advices about there hair and bread styles to improve your life style</p>
+      <form id="appointment">
         <label>
           Your Name:
           <input type="text" name="name" />

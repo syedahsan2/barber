@@ -66,7 +66,6 @@ body {
     width: 250px;
     height: 100%;
     background-color: #333;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -383,6 +382,7 @@ body {
 
   .about-image-container img {
     width: 100%;
+    height: 500px;
   }
 
   .overlay-text h3 {
@@ -396,5 +396,374 @@ body {
   .cta-button {
     font-size: 1rem;
     padding: 8px 12px;
+  }
+}
+
+.image-text-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container {
+  position: relative;
+  width: 100%; /* You can adjust this as per your needs */
+  height: 500px; /* Same as image size */
+}
+
+.image-with-text {
+  width: 100%;
+  height: 100%;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional shadow for better readability */
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Services Section Styling */
+#services {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#services ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#services ul li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services ul li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#services ul li {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+#services ul li::before {
+  content: "•";
+  color: #ff6b6b;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #services ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #services ul li {
+    width: 80%;
+  }
+}
+/* Testimonials Section Styling */
+#testimonials {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto; /* Center the card in the slide */
+  max-width: 300px; /* Limit card width */
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.client-info {
+  margin-bottom: 15px;
+}
+
+.client-info h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.client-info p {
+  font-size: 1rem;
+  color: #777;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.rating {
+  font-size: 1.2rem;
+  color: #ffcc00; /* Gold color for stars */
+}
+
+/* Swiper Navigation and Pagination Styles */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #333; /* Arrow color */
+}
+
+.swiper-pagination-bullet {
+  background-color: #333; /* Pagination bullet color */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ff6b6b; /* Active pagination bullet color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 90%; /* Adjust card width for mobile */
+  }
+}
+/* Barbers Section Styling */
+#barbers {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#barbers h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+#barbers > div {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+#barbers > div > div {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#barbers > div > div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#barbers h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#barbers p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #barbers > div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #barbers > div > div {
+    width: 90%;
+  }
+}
+
+/* Pricing Section Styling */
+#pricing {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#pricing h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+#pricing ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#pricing ul li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#pricing ul li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#pricing ul li span {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+#pricing ul li span:first-child {
+  font-weight: bold;
+  color: #333;
+}
+
+#pricing ul li span:last-child {
+  color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #pricing ul li {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #pricing ul li span {
+    margin-bottom: 10px;
+  }
+}
+#appointment {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#appointment h2 {
+  font-size: 24px;
+  color: #5a3e36;
+  margin-bottom: 10px;
+}
+p{
+  font-size: 12px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  text-align: left;
+}
+
+input, select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #d9c5b2;
+  border-radius: 8px;
+  background: #fdfaf6;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background: #b07c61;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #8c5a47;
+}
+
+@media (max-width: 768px) {
+  #appointment {
+    max-width: 90%;
+    padding: 15px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+
+  input, select {
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 10px;
   }
 }

@@ -5,10 +5,22 @@ const Pricing = () => {
     <section id="pricing">
       <h2>Barber Prices</h2>
       <ul>
-        <li>Signature Shave - $80 (1 hour)</li>
-        <li>Deluxe Treatment - $25 (30 minutes)</li>
-        <li>Deluxe Hot Shave - $25 (30 minutes)</li>
-        <li>Razor Shave - $50 (30 minutes)</li>
+        <li>
+          <span>Signature Shave - $80</span>
+          <span>1 hour</span>
+        </li>
+        <li>
+          <span>Deluxe Treatment - $25</span>
+          <span>30 minutes</span>
+        </li>
+        <li>
+          <span>Deluxe Hot Shave - $25</span>
+          <span>30 minutes</span>
+        </li>
+        <li>
+          <span>Razor Shave - $50</span>
+          <span>30 minutes</span>
+        </li>
       </ul>
     </section>
   );
