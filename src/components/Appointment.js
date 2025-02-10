@@ -2,41 +2,49 @@ import React from 'react';
 
 const Appointment = () => {
   return (
-<section >
-<h2>Appointment</h2>
-      <p >Book Your Service
-      </p>
-      <p >Signup to our newsletters and get most of the community advices about there hair and bread styles to improve your life style</p>
+    <section id="m-appoi">
+      <h2>Appointment</h2>
+      <p>Book Your Service</p>
+      <p>Signup to our newsletters and get most of the community advices about their hair and beard styles to improve your lifestyle</p>
       <form id="appointment">
-        <label>
-          Your Name:
-          <input type="text" name="name" />
-        </label>
-        <label>
-          Your Email:
-          <input type="email" name="email" />
-        </label>
-        <label>
-          Your Phone:
-          <input type="tel" name="phone" />
-        </label>
-        <label>
-          Choose A Barber:
-          <select name="barber">
-            <option value="">Choose a barber...</option>
-            <option value="josh">Josh Armstrong</option>
-            <option value="jenny">Jenny Morano</option>
-            <option value="alberto">Alberto Morano</option>
-          </select>
-        </label>
-        <label>
-          Date:
-          <input type="date" name="date" />
-        </label>
-        <label>
-          Time:
-          <input type="time" name="time" />
-        </label>
+        <div className="form-row">
+          <label>
+            Your Name:
+            <input type="text" name="name" />
+          </label>
+          <label>
+            Your Email:
+            <input type="email" name="email" />
+          </label>
+        </div>
+
+        <div className="form-row">
+          <label>
+            Your Phone:
+            <input type="tel" name="phone" />
+          </label>
+          <label>
+            Choose A Barber:
+            <select name="barber">
+              <option value="">Choose a barber...</option>
+              <option value="josh">Josh Armstrong</option>
+              <option value="jenny">Jenny Morano</option>
+              <option value="alberto">Alberto Morano</option>
+            </select>
+          </label>
+        </div>
+
+        <div className="form-row">
+          <label>
+            Date:
+            <input type="date" name="date" />
+          </label>
+          <label>
+            Time:
+            <input type="time" name="time" />
+          </label>
+        </div>
+
         <label>
           Services:
           <select name="service">
@@ -47,6 +55,7 @@ const Appointment = () => {
             <option value="head-shave">Head Shave</option>
           </select>
         </label>
+
         <button type="submit">BOOK AN APPOINTMENT</button>
       </form>
     </section>

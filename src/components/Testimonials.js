@@ -8,7 +8,6 @@ import { Navigation, Pagination } from 'swiper/modules';
 const Testimonials = () => {
   return (
     <section id="testimonials">
-      <h2>What Our Clients Say</h2>
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={30}
