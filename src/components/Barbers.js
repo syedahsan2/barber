@@ -4,6 +4,8 @@ const Barbers = () => {
   return (
     <section id="barbers">
       <h2>Our Barbers</h2>
+      <p className="p-b">Meet Our Barber</p>
+
       <div>
         <div>
           <h3>Josh Armstrong</h3>

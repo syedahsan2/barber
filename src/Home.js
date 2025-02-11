@@ -17,6 +17,18 @@ function Home() {
       <Header />
       <Slider />
       <About />
+      <div className="image-text-section">
+          <div className="image-container">
+          <img 
+            src="./home.png" 
+            alt="Barber Shop with Text" 
+            className="image-with-text" 
+          />
+          <div className="text-overlay">
+            <button>Make an appointment</button>
+          </div>
+        </div>
+        </div>
       <Services />
       <Testimonials />
       <Barbers />

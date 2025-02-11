@@ -7,29 +7,12 @@ const About = () => {
       <p>Our Story Starts Here</p>
       
       <div className="about-image-container">
-        <img src="https://via.placeholder.com/600x400?text=Barber+Shop+Image" alt="Barber Shop" /> <br/>
-        <img src="https://via.placeholder.com/600x400?text=Barber+Shop+Image" alt="Barber Shop" />
+        <img src="./img.png" alt="Barber Shop" />
       </div>
 
-      <p>WELCOME TO BARBER HAIR SALON AND BARBERSHOP</p>
-      <p>GROOMING LIFE STYLE AND SELF CONFIDENCE</p>
-      <p>TERRITORY OF PREMIUM QUALITY SINCE 1990</p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-
-            {/* New Section with Image and Text */}
-          <div className="image-text-section">
-          <div className="image-container">
-          <img 
-            src="./eg1.webp" 
-            alt="Barber Shop with Text" 
-            className="image-with-text" 
-          />
-          <div className="text-overlay">
-            <p>Enhance your look with the finest grooming experience!</p>
-            <button>test</button>
-          </div>
-        </div>
-        </div>
+      <p className="p-h">WELCOME TO BARBER HAIR SALON AND BARBERSHOP <br/>GROOMING LIFE STYLE AND SELF CONFIDENCE</p>
+      <p className="p-hh">TERRITORY OF PREMIUM QUALITY SINCE 1990</p>
+      <p className="p-hhh">Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
 
     </section>
   );
