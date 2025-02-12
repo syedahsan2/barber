@@ -1,62 +1,50 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const Slider = () => {
   const slides = [
     {
-      image: './eg1.webp',
-      text: 'Welcome to the Barber Shop!',
+      image: "./eg1.jpg",
+      title: "hair salon · barbershop",
+      subtitle: "SELF CONFIDENCE · GROOMING · LIFE STYLE",
     },
     {
-      image: './eg1.webp',
-      text: 'Get the Best Cuts in Town!',
+      image: "./eg1.jpg",
+      title: "Modern & Stylish Cuts",
+      subtitle: "ELEVATE YOUR LOOK",
     },
     {
-      image: './eg1.webp',
-      text: 'Book Your Appointment Now!',
+      image: "./eg1.jpg",
+      title: "Book Your Appointment",
+      subtitle: "LOOK SHARP, FEEL CONFIDENT",
     },
   ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Change the slide every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval); // Clean up the interval on component unmount
-  }, []);
-
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? slides.length - 1 : prevSlide - 1
-    );
-  };
-
   return (
     <div className="slider-container">
-      <div className="slider">
-        <img
-          src={slides[currentSlide].image}
-          alt={`Slide ${currentSlide + 1}`}
-          className="slider-image"
-        />
-        <div className="slider-text">
-          <h2>{slides[currentSlide].text}</h2>
-        </div>
-      </div>
-
-      <div className="slider-nav">
-        <button className="prev" onClick={prevSlide}>
-          &#10094;
-        </button>
-        <button className="next" onClick={nextSlide}>
-          &#10095;
-        </button>
-      </div>
+      <Swiper
+        modules={[Navigation, Autoplay]}
+        navigation
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        loop
+        className="swiper-container"
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="slider">
+              <img src={slide.image} alt={`Slide ${index + 1}`} className="slider-image" />
+              <div className="slider-overlay"></div>
+              <div className="slider-text">
+                <h2 className="title">{slide.title}</h2>
+                <p className="subtitle">{slide.subtitle}</p>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };
